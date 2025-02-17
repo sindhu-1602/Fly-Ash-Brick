@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godavari Fly Ash Bricks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login/Register Section -->
+    <div id="auth-container">
+        <div id="login-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="login-username">Username:</label>
+                <input type="text" id="login-username" required>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" required>
+                <button type="submit">Login</button>
+                <p><a id="show-register" href="#">New user? Register here</a></p>
+            </form>
+        </div>
+        <div id="register-section" style="display: none;">
+            <h2>Register</h2>
+            <form id="register-form">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" required>
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" required>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" required>
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" required>
+                <label for="address">Address:</label>
+                <textarea id="address" required></textarea>
+                <label for="register-username">Username:</label>
+                <input type="text" id="register-username" required>
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" required>
+                <button type="submit">Register</button>
+                <p><a id="show-login" href="#">Already have an account? Login here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="main-container" style="display: none;">
+        <header>
+            <div id="company-info">
+                <img src="logo.png" alt="Company Logo" id="company-logo">
+                <h1>GODAVARI FLY ASH BRICKS</h1>
+            </div>
+            <div id="profile-section">
+                <button id="profile-btn">Profile</button>
+                <div id="profile-popup" class="popup-slide">
+                    <h3>Profile</h3>
+                    <div id="profile-details"></div>
+                    <button id="edit-profile-btn">Edit</button>
+                    <button id="previous-orders-btn">Previous Orders</button>
+                    <button id="close-profile-btn">Close</button>
+                </div>
+                <button id="logout">Logout</button>
+            </div>
+        </header>
+
+        <main>
+            <div id="product-section">
+                <label for="brick-type">Select Brick Type:</label>
+                <select id="brick-type">
+                    <option value="small">Small - 18Rs (6x7x12)</option>
+                    <option value="medium">Medium - 23Rs (4x7x12)</option>
+                    <option value="large">Large - 26Rs (5.5x9x11.5)</option>
+                    <option value="custom">Custom</option>
+                </select>
+                <div id="custom-dimensions" style="display: none;">
+                    <label>Length:</label>
+                    <input type="text" id="custom-length">
+                    <label>Width:</label>
+                    <input type="text" id="custom-width">
+                    <label>Height:</label>
+                    <input type="text" id="custom-height">
+                </div>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity">
+                <button id="reset-quantity">Reset</button>
+            </div>
+
+            <div id="village-section">
+                <label for="village">Select Village:</label>
+                <select id="village"></select>
+                <button id="reset-village">Reset</button>
+            </div>
+
+            <div id="cart-section">
+                <button id="add-to-cart">Add to Cart</button>
+                <button id="clear-cart">Clear Cart</button>
+            </div>
+
+            <div id="cart-box">
+                <h3>Cart</h3>
+                <div id="cart-items"></div>
+                <button id="buy-now" disabled>Buy Now</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Owner: D. Venkateswar Rao | Phone: <a href="tel:9848107952">9848107952</a></p>
+            <p>Email: <a href="mailto:dvrao.davuluri@gmail.com">dvrao.davuluri@gmail.com</a></p>
+            <p>Address: <a href="https://maps.google.com/?q=Godavari Fly Ash Bricks, Nuzvidu Road">Godavari Fly Ash Bricks, Hanuman Junction</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
